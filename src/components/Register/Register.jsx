@@ -1,27 +1,29 @@
 import React from "react";
-import "./Login.css";
 import { useHistory } from "react-router-dom";
-// import { Button } from "bootstrap";
+import "./Register.css";
 
-const Login = () => {
+const Register = () => {
+  
   const history = useHistory();
 
-  const RegisterNow = () => {
-    history.replace("/register");
-  };
-
-  const SignIn = () => {
-    // hit login api and save token
-    history.replace('/home');
+  const SignUp = () => {
+    history.replace('/');
   }
 
   return (
     <>
       <div className="main-w3layouts wrapper">
-        <h1>Login</h1>
+        <h1>SignUp Here</h1>
         <div className="main-agileinfo">
           <div className="agileits-top">
-            <form action="#" method="post">
+            <form action="" method="post">
+              <input
+                className="text"
+                type="text"
+                name="Username"
+                placeholder="Username"
+                required
+              />
               <input
                 className="text email"
                 type="email"
@@ -36,18 +38,21 @@ const Login = () => {
                 placeholder="Password"
                 required
               />
+              <input
+                className="text w3lpass"
+                type="password"
+                name="password"
+                placeholder="Confirm Password"
+                required
+              />
               <div className="wthree-text">
                 <div className="clear"> </div>
               </div>
-              <input className="customButton" onClick={SignIn} type="button" defaultValue="SIGN IN" />
+              <input className="customButton" type="button" onClick={SignUp} defaultValue="SIGN UP" />
             </form>
-            <p>
-              Don't have an Account?{" "}
-              <span onClick={RegisterNow} style={{cursor: "pointer"}}>
-                {" "}
-                Register Now!
-              </span>
-            </p>
+            {/* <p>
+              Don't have an Account? <a href="/register"> Register Now!</a>
+            </p> */}
           </div>
         </div>
         <ul className="colorlib-bubbles">
@@ -67,4 +72,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
