@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+
+.brand_name{
+    font-family: 'Roboto Condensed', sans-serif;
+    animation: brand_name 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes brand_name {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.ul_css{
+  margin: 5px 0px !important;
+  padding: 0 !important;
+}
