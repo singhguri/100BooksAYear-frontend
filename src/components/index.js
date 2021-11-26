@@ -5,3 +5,4 @@ export { default as BookForm } from "./BookForm/BookForm";
 
 export const locationArr = ["/home"];
 
+export const baseUrl = "https://api-100-books-a-year.herokuapp.com";

@@ -1,11 +1,14 @@
 import React from "react";
 import "./Navbar.css";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { locationArr } from "../index.js";
 
 const Navbar = () => {
   const location = useLocation();
 
+  const LogOut = () => {
+    
+  }
   return (
     <>
       <nav
@@ -32,32 +35,32 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/#">
+                <a className="nav-link active" aria-current="page" href="/home">
                   Home
                 </a>
               </li>
-              <li className="nav-item">
-                <a
-                  href="/#"
+              {/* <li className="nav-item">
+                <NavLink
+                  to
                   className="nav-link"
                   type="submit"
                   style={{ color: "yellow" }}
                 >
                   Login
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a
-                  href="/#"
+                <NavLink
+                  to='/home'
                   className="nav-link"
                   type="submit"
                   style={{ color: "pink" }}
                 >
                   Register
-                </a>
-              </li>
+                </NavLink>
+              </li> */}
             </ul>
-            <form className="d-flex">
+            {/* <form className="d-flex">
               <input
                 className="form-control me-2"
                 type="search"
@@ -72,7 +75,20 @@ const Navbar = () => {
               <button className="btn btn-sm btn-outline-light" type="button">
                 Search
               </button>
-            </form>
+            </form> */}
+            <ul>
+            <li className="nav-item">
+                <NavLink
+                  to='/'
+                  className="nav-link"
+                  type="button"
+                  onClick={LogOut}
+                  style={{ color: "pink" }}
+                >
+                  Log Out
+                </NavLink>
+              </li>
+              </ul>
           </div>
         </div>
       </nav>
