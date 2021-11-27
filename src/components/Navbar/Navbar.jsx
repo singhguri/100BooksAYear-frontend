@@ -1,14 +1,16 @@
 import React from "react";
 import "./Navbar.css";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useHistory } from "react-router-dom";
 import { locationArr } from "../index.js";
 
 const Navbar = () => {
   const location = useLocation();
+  const history = useHistory();
 
   const LogOut = () => {
-    
-  }
+    localStorage.setItem('token', '');
+    history.replace("/");
+  };
   return (
     <>
       <nav
@@ -35,9 +37,13 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/home">
+                <NavLink
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/home"
+                >
                   Home
-                </a>
+                </NavLink>
               </li>
               {/* <li className="nav-item">
                 <NavLink
@@ -77,18 +83,17 @@ const Navbar = () => {
               </button>
             </form> */}
             <ul>
-            <li className="nav-item">
-                <NavLink
-                  to='/'
+              <li className="nav-item">
+                <p
                   className="nav-link"
                   type="button"
                   onClick={LogOut}
-                  style={{ color: "pink" }}
+                  style={{ color: "pink", marginBottom: 0, paddingTop: '1rem' }}
                 >
                   Log Out
-                </NavLink>
+                </p>
               </li>
-              </ul>
+            </ul>
           </div>
         </div>
       </nav>
