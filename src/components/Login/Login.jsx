@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import { useHistory } from "react-router-dom";
 import { LoginService } from "../../services/LoginService";
-import Loader from "../common/Loader";
+import Loader from "../common/Loader/Loader";
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -62,6 +62,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
+                  autoComplete="false"
                   onChange={setEmail}
                   required
                 />
@@ -70,6 +71,7 @@ const Login = () => {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  autoComplete="false"
                   onChange={setPassword}
                   required
                 />

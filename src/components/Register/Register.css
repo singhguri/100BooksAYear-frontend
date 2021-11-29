@@ -60,7 +60,7 @@ input[type="password"] {
 }
 
 input.email,
-input.text.w3lpass {
+input.text.w3lpass,input.last-name {
   margin: 2em 0;
 }
 

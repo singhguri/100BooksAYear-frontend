@@ -50,6 +50,7 @@ const Register = () => {
                 type="text"
                 name="first_name"
                 placeholder="First Name"
+                autoComplete="false"
                 onChange={(event) => {
                   setRegisterUser({
                     ...registerUser,
@@ -59,10 +60,11 @@ const Register = () => {
                 required
               />
               <input
-                className="text"
+                className="text last-name"
                 type="text"
                 name="last_name"
                 placeholder="Last Name"
+                autoComplete='false'
                 onChange={(event) => {
                   setRegisterUser({
                     ...registerUser,
@@ -76,6 +78,7 @@ const Register = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
+                autoComplete='false'
                 onChange={(event) => {
                   setRegisterUser({
                     ...registerUser,
@@ -89,6 +92,7 @@ const Register = () => {
                 type="password"
                 name="password"
                 placeholder="Password"
+                autoComplete='false'
                 onChange={(event) => {
                   setRegisterUser({
                     ...registerUser,
@@ -102,6 +106,7 @@ const Register = () => {
                 type="password"
                 name="password"
                 placeholder="Confirm Password"
+                autoComplete='false'
                 onChange={(event) => {
                   setRegisterUser({
                     ...registerUser,

@@ -1,5 +1,6 @@
 import React from "react";
 import { GooeyCircleLoader } from "react-loaders-kit";
+import "./Loader.css";
 
 const Loader = () => {
   const loaderProps = {
@@ -12,7 +13,7 @@ const Loader = () => {
   return (
     <div className="loader">
       <GooeyCircleLoader {...loaderProps} />
-      Loading...
+      <p className="loader-text"> Loading... </p>
     </div>
   );
 };
